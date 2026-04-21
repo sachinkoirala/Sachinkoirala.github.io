@@ -45,6 +45,8 @@ const BUGS = [
   },
 ];
 
+const LADYBUG = "🐞";
+
 const TOTAL = BUGS.length;
 
 export default function BugHunt() {
@@ -88,7 +90,7 @@ export default function BugHunt() {
           key={bug.id}
           onClick={() => catchBug(bug)}
           aria-label="Found a bug — click to catch it!"
-          title="🐛 Click me!"
+          title="🐞 Click me!"
           style={{
             position: "fixed",
             top: bug.top,
@@ -114,7 +116,7 @@ export default function BugHunt() {
             e.currentTarget.style.transform = "scale(1)";
           }}
         >
-          🐛
+          {LADYBUG}
         </button>
       ))}
 
@@ -141,7 +143,7 @@ export default function BugHunt() {
             maxWidth: 290,
           }}
         >
-          <span style={{ fontSize: "1rem" }}>🐛</span> Bug #{toast.id} caught!
+          <span style={{ fontSize: "1rem" }}>🐞</span> Bug #{toast.id} caught!
           {"\n"}
           <span style={{ color: "var(--fg-muted)" }}>{toast.msg}</span>
         </div>
@@ -168,7 +170,7 @@ export default function BugHunt() {
             animation: "fadeInLeft 0.2s ease",
           }}
         >
-          🐛 {caught.length}/{TOTAL} bugs caught
+          🐞 {caught.length}/{TOTAL} ladybugs caught
         </div>
       )}
 
@@ -193,7 +195,7 @@ export default function BugHunt() {
             maxWidth: 320,
           }}
         >
-          🎉 All {TOTAL} bugs resolved!{"\n"}
+          🎉 All {TOTAL} ladybugs caught!{"\n"}
           <span style={{ opacity: 0.88, fontSize: "0.73rem" }}>
             You think like a QA engineer. Sachin would be proud.
           </span>
