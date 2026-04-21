@@ -170,7 +170,7 @@ export default function BugHunt() {
             animation: "fadeInLeft 0.2s ease",
           }}
         >
-          🐞 {caught.length}/{TOTAL} ladybugs caught
+          🐞 {caught.length}/{TOTAL} bugs caught
         </div>
       )}
 
@@ -195,7 +195,7 @@ export default function BugHunt() {
             maxWidth: 320,
           }}
         >
-          🎉 All {TOTAL} ladybugs caught!{"\n"}
+          🎉 All {TOTAL} bugs caught!{"\n"}
           <span style={{ opacity: 0.88, fontSize: "0.73rem" }}>
             You think like a QA engineer. Sachin would be proud.
           </span>
