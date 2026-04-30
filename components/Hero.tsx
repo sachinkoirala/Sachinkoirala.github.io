@@ -12,6 +12,14 @@ const LinkedinIcon = () => (
   </svg>
 );
 
+const DownloadIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+    <polyline points="7 10 12 15 17 10"/>
+    <line x1="12" y1="15" x2="12" y2="3"/>
+  </svg>
+);
+
 const roles = [
   "Quality Assurance Engineer",
   "E-Governance Practitioner",
@@ -186,6 +194,40 @@ export default function Hero() {
             {hireState === "pass" && "✓ PASS — let's go"}
           </a>
           <a href="#experience" style={s.btnSecondary}>View work</a>
+
+          {/* Download CV */}
+          <a
+            href="/sachin-koirala-cv.pdf"
+            download="Sachin_Koirala_CV.pdf"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 7,
+              padding: "10px 22px",
+              borderRadius: 8,
+              backgroundColor: "transparent",
+              color: "var(--fg)",
+              fontSize: "0.875rem",
+              fontWeight: 500,
+              textDecoration: "none",
+              border: "1px solid var(--border)",
+              transition: "border-color 0.15s, background-color 0.15s",
+              cursor: "pointer",
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.borderColor = "rgba(245,158,11,0.6)";
+              e.currentTarget.style.backgroundColor = "rgba(245,158,11,0.07)";
+              e.currentTarget.style.color = "#d97706";
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.borderColor = "var(--border)";
+              e.currentTarget.style.backgroundColor = "transparent";
+              e.currentTarget.style.color = "var(--fg)";
+            }}
+          >
+            <DownloadIcon />
+            Download CV
+          </a>
         </div>
 
         {/* Social icons */}
